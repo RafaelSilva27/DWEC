@@ -7,8 +7,8 @@ const carrito = [
 
 console.table(carrito);
 mostrarcarrito_for();
-mostrarcarrito_while();
-mostrarcarrito_dowhile();
+//mostrarcarrito_while();
+//mostrarcarrito_dowhile();
 
 
 function mostrarcarrito_for() {
@@ -17,9 +17,9 @@ function mostrarcarrito_for() {
   }
 }
 
-function mostrarcarrito_while() {
+/*function mostrarcarrito_while() {
   let i = 0;
   while (carrito.length > 0) {
     console.log(carrito[i].nombre);
   }
-}
+}*/
