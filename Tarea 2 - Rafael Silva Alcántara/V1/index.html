@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notas y Estadísticas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Notas de Rafael</h1>
+
+  <ul id="listaNotas"></ul>
+
+  <h2>Promedio</h2>
+  <p id="promedio">Promedio: <span id="promedioCalculo">0</span></p>
+  <button onclick="calcularPromedio()">Calcular Promedio</button>
+
+  <h2>Nota mas alta</h2>
+  <p id="NotaAlta">Nota mas alta: <span id="NotaMasAlta">0</span></p>
+  <button onclick="calcularNotaMasAlta()">Calcular nota mas alta</button>
+
+  <h2>Suspenso</h2>
+  <p id="suspensoResultado">¿Hay algun suspenso? <span id="haySuspenso">No</span></p>
+  <button onclick="verificarSuspenso()">Verificar Suspenso</button>
+
+</body>
+</html>
