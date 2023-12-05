@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // ZONA DE VARIABLES
   const tweetForm = document.getElementById("tweetForm");
-  const tweetList = document.getElementById("tweetList");
+  const tweetLista = document.getElementById("tweetLista");
   const resetButton = document.getElementById("resetButton");
 
   let tweets = JSON.parse(localStorage.getItem("tweets")) || [];
@@ -12,13 +12,13 @@ document.addEventListener("DOMContentLoaded", function () {
   tweetForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const tweetText = document.getElementById("tweetText").value;
+      const tweetTexto = document.getElementById("tweetTexto").value;
 
-      if (tweetText.trim() !== "") {
+      if (tweetTexto.trim() !== "") {
 
-          addTweet(tweetText);
+          addTweet(tweetTexto);
 
-          document.getElementById("tweetText").value = "";
+          document.getElementById("tweetTexto").value = "";
       } else {
           showError("El tweet no puede estar vacío");
       }
@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // ZONA DE FUNCIONES
-  function addTweet(tweetText) { //Funcion para agregar un tweet
-      tweets.push(tweetText);
+  function addTweet(tweetTexto) { //Funcion para agregar un tweet
+      tweets.push(tweetTexto);
       renderTweets();
       localStorage.setItem("tweets", JSON.stringify(tweets));
   }
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function renderTweets() { //Funcion para renderizar los tweets
-      tweetList.innerHTML = "";
+      tweetLista.innerHTML = "";
 
       tweets.forEach(function (tweet, index) {
           const listItem = document.createElement("li");
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           listItem.appendChild(deleteButton);
 
-          tweetList.appendChild(listItem);
+          tweetLista.appendChild(listItem);
       });
   }
 });
